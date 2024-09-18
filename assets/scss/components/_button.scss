@@ -1,0 +1,51 @@
+.theme-btn {
+  background: $btn-bg;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: $primary-color;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 0;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+  padding: 8px 12px;
+
+  span {
+    margin-left: 8px;
+  }
+
+  &:hover{
+    span{
+      margin-right: -3px;
+      transition: 0.1ss ease-in-out;
+    }
+  }
+
+  &.dark-btn {
+    background: $primary-color;
+    color: #fff;
+
+    &:hover {
+      color: $primary-color;
+      background: #E5EDF4;
+    }
+  }
+
+  &:disabled{
+    background: #F2F2F2;
+    color: #CCCCCC;
+    &:hover{
+      background: #F2F2F2;
+      color: #CCCCCC;
+    }
+  }
+
+}

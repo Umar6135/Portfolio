@@ -1,0 +1,53 @@
+.cards {
+  background-color: $primary-color;
+  color: $text-color;
+  &-slider {
+    margin-top: 30px;
+  }
+
+  .slick-slide {
+    margin: 10px;
+  }
+
+  .slick-slide img {
+    width: 100%;
+  }
+
+  ul{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    li{
+      cursor: pointer;
+      i{
+        font-size: 20px;
+      }
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    border-radius: 10px;
+    border-color: transparent;
+  }
+}
+
+
+
+
+.card {
+  box-shadow: 0px 3px 13px #ccc;
+  padding: 20px;
+}
+
+.card-body {
+  width: 100%;
+  vertical-align: top;
+
+  .card-title {
+    padding: 10px 0;
+  }
+
+  .theme-btn {
+    margin-top: 20px;
+  }
+}

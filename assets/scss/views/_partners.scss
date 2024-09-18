@@ -1,0 +1,17 @@
+.partner {
+    background-color: $primary-color;
+    color: $text-color;
+    &-heading {
+        text-align: center;
+    }
+    &-row{
+        .slick-arrow{
+            display: none !important;
+        }
+        .partner-img{
+            display: flex;
+            align-items: center;
+            padding-inline:20px;
+        }
+    }
+}

@@ -1,0 +1,134 @@
+.banner {
+  position: relative;
+  color: $text-color;
+  .carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    .overlay{
+      
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(40 39 39 / 30%);
+    }
+    &-item {
+      min-width: 100%;
+      box-sizing: border-box;
+      position: relative;
+      height: 80vh;
+    }
+
+    &-inner {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+
+      video {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        filter: brightness(30%);
+      }
+    }
+
+
+    &-indicators {
+      text-align: center;
+      margin-top: 10px;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        li {
+          text-align: start;
+          position: relative;
+          cursor:pointer;
+          font-size: 16px;
+          font-weight: 400;
+
+          &.active {
+            color: $btn-bg;
+
+            &::before {
+              content: "";
+              width: 100%;
+              height: 1.5px;
+              position: absolute;
+              top: -5px;
+              background: $btn-bg;
+            }
+          }
+
+          &::before {
+            content: "";
+            width: 100%;
+            height: 1.5px;
+            position: absolute;
+            top: -5px;
+            background: #ffffff69;
+
+          }
+
+
+        }
+      }
+    }
+
+  }
+
+  &-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    h1 {
+      span {
+        color: $btn-bg;
+      }
+    }
+    p{
+      max-width: 600px;
+    }
+  }
+}
+
+.logo{
+  background-color: #fff;
+  max-width: fit-content;
+  margin-top: 20px;
+  height: 59px;
+
+  img{
+      width: 60px;
+  }
+}
+.py-50{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media (max-width:576px){
+  .banner-content{
+    top: 45%;
+  }
+  .banner .carousel-indicators ul li{
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,65 @@
+.technologies{
+    background-color: $primary-color;
+    color: $text-color;
+    &-heading{
+        text-align:center;
+    }
+    &-tabs{
+        .tech-tab{
+            display: none;
+            &.active{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+        hr{
+            margin: 40px 0; 
+        }
+        &-btn{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+        .tech-tab-link{
+            padding: 10px 8px;
+            background: #fff;
+            color: $dark-color;
+            border-radius: 5px;
+            min-width: 100px;
+            text-align: center;        
+            min-width: 100px;
+            &:hover,
+            &.active{
+                background-color: $btn-bg;
+                color: $text-color;
+            }
+        }
+        .tech-tab{
+            &-item{
+            padding: 10px 8px;
+            background: #fff;
+            color: #0a0a0a;
+            border-radius: 5px;
+            min-width: 100px;
+            text-align: center;
+            min-width: 100px;
+            &:hover{
+                background-color: $btn-bg;
+                color: $text-color;
+            }
+            }
+        }
+    }
+}
+
+@media(max-width:768px){
+    .technologies-tabs-btn{
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .technologies-tabs .tech-tab-link{
+        min-width: 70px;
+    }
+}
